@@ -59,10 +59,16 @@ let students = [
 const uppercaseName = students.map((el,i)=>{
     const upName = el.Name.toUpperCase()
     return upName
+});
+console.log(uppercaseName);
+
+const voteOver70 = students.filter((el)=>{
+    return el.Grades > 70
+});
+console.log(voteOver70);
+
+const voteAndId = students.filter((el)=>{
+    return el.Grades > 70 && el.Id > 120
 })
-console.log(uppercaseName)
-
-
-
-
+console.log(voteAndId);
 
