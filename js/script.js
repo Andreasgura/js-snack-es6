@@ -56,6 +56,10 @@ let students = [
     }
 ];
 
+students.forEach(element => {
+    console.log(element.Name)
+});
+
 const uppercaseName = students.map((el,i)=>{
     const upName = el.Name.toUpperCase()
     return upName
@@ -72,3 +76,16 @@ const voteAndId = students.filter((el)=>{
 })
 console.log(voteAndId);
 
+
+let bikes = [
+    {Name : 'bici1', weight : 81 }, 
+    {Name : 'bici2', weight : 61 },
+    {Name : 'bici3', weight : 26 },
+    {Name : 'bici4', weight : 19 },
+    {Name : 'bici5', weight : 45 },
+    {Name : 'bici6', weight : 83 },
+]
+
+bikes.sort(function(a, b){return a.weight - b.weight});
+// displayCars();
+console.log(bikes[0]);
