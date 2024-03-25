@@ -89,3 +89,29 @@ let bikes = [
 bikes.sort(function(a, b){return a.weight - b.weight});
 // displayCars();
 console.log(bikes[0]);
+
+let teams = [
+    {name : 'team1', points: 0, foulsSuffered: 0},
+    {name : 'team2', points: 0, foulsSuffered: 0},
+    {name : 'team3', points: 0, foulsSuffered: 0},
+    {name : 'team4', points: 0, foulsSuffered: 0},
+    {name : 'team5', points: 0, foulsSuffered: 0}
+];
+
+teams.forEach(el => {
+    el.points = getRndInteger(1, 100)
+    el.foulsSuffered = getRndInteger(1, 100)
+});
+console.log(teams);
+
+// const newTeams = teams.map((el)=>{
+//     let newObj = { name : el.name }
+//     return newObj  
+// });
+// console.log(newTeams);
+
+const newTeams = teams.map((el)=> {
+    const {name, foulsSuffered} = el;
+    return {name, foulsSuffered};
+});
+console.log(newTeams);
